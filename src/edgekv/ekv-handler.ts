@@ -541,8 +541,8 @@ export async function createToken(
     overwrite?;
   }
 ) {
-  // convert string to ISO date
-  const expiry = getExpiryDate(options.expiry);
+  // convert string to ISO date if exists
+  const expiry = (options['expiry']) ? getExpiryDate(options.expiry) : '';
 
   // parse input permissions
   const permissionList = parseNameSpacePermissions(options.namespace);

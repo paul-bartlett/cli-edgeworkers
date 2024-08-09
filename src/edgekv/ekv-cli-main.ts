@@ -497,7 +497,6 @@ create
           'staging',
           'production',
           'ewids',
-          'expiry',
           'namespace',
         ];
         cliUtils.checkOptions(options, requiredOptions);
