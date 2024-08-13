@@ -147,7 +147,7 @@ export function logToken(token, savePath = false) {
     console.log(
       'Token Name:          ', token['name'] + '\n'
       + 'CpCode used:         ', token['cpc'] + '\n'
-      + 'Valid for EWIDs:     ', token['ewids'] + '\n'
+      + 'Valid for EWIDs:     ', token['restrictToEdgeWorkerIds'] + '\n'
       + 'Valid on Production: ', production + '\n'
       + 'Valid on Staging:    ', staging + '\n'
       + `Issue date:           ${weekday[issueDate.getDay()]},${issueDate.getDate()} ${shortMnthNames[issueDate.getMonth()]} ${issueDate.getFullYear()} \n`
@@ -201,7 +201,7 @@ export function logToken(token, savePath = false) {
     }
     const tokenActivationStatus = token['tokenActivationStatus']  ?? 'N/A';
     const tokenCpcode = token['cpcode'] ?? 'N/A';
-    const tokenEwids = token['ewids'] ? token['ewids'].join(', ') : 'N/A';
+    const tokenEwids = token['restrictToEdgeWorkerIds'] ? token['restrictToEdgeWorkerIds'].join(', ') : 'N/A';
     const staging = token['allowOnStaging'] ?? 'N/A';
     const production = token['allowOnProduction'] ?? 'N/A';
 
