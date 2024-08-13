@@ -147,7 +147,7 @@ export function logToken(token, savePath = false) {
     console.log(
       'Token Name:          ', token['name'] + '\n'
       + 'CpCode used:         ', token['cpc'] + '\n'
-      + 'Valid for EWIDs:     ', token['restrictToEdgeWorkerIds'] + '\n'
+      + 'Valid for EWIDs:     ', token['ewids'] + '\n'
       + 'Valid on Production: ', production + '\n'
       + 'Valid on Staging:    ', staging + '\n'
       + `Issue date:           ${weekday[issueDate.getDay()]},${issueDate.getDate()} ${shortMnthNames[issueDate.getMonth()]} ${issueDate.getFullYear()} \n`
